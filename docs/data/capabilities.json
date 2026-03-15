@@ -1,5 +1,15 @@
 [
   {
+    "id": "soft-robot-actuators",
+    "title": "Soft & Reconfigurable Robotic Actuators",
+    "description": "Pneumatic and hydraulic soft actuators that conform to irregular surfaces and safely interact with delicate or unknown objects — enabling manipulation in environments where rigid robots cannot operate.",
+    "areas": ["new-eyes-bodies", "dexterous-manipulation"],
+    "faculty": ["girish-krishnan", "mattia-gazzola", "craig-shultz", "wenzhen-yuan"],
+    "videos": [],
+    "tags": ["Soft robotics", "Pneumatic", "Manipulation", "Bio-inspired"],
+    "trl": 5
+  },
+  {
     "id": "l1-adaptive-control",
     "title": "L1 Adaptive Control for UAVs",
     "description": "Deployable L1 adaptive controllers providing guaranteed transient and steady-state performance bounds for fixed-wing and multi-rotor UAVs under payload uncertainty and wind disturbances. Demonstrated on Lockheed Martin platforms.",
@@ -79,16 +89,6 @@
     "trl": 3
   },
   {
-    "id": "formal-verification-cps",
-    "title": "Formal Verification for Autonomous Systems",
-    "description": "Automated verification tools that generate correctness certificates for cyber-physical systems — proving that an autonomous controller satisfies safety and liveness properties across all possible environments.",
-    "areas": ["safe-autonomy", "simulation"],
-    "faculty": ["sayan-mitra", "daniel-liberzon"],
-    "videos": [],
-    "tags": ["Formal methods", "Safety certificates", "CPS", "Verification"],
-    "trl": 5
-  },
-  {
     "id": "digital-twin-construction",
     "title": "Digital Twin for Facility Monitoring",
     "description": "Reality-capture and 4D BIM pipeline that fuses LiDAR, RGB-D, and video data into continuously updated 3D digital twins, enabling automated change detection, progress monitoring, and anomaly flagging.",
@@ -111,13 +111,13 @@
     "trl": 8
   },
   {
-    "id": "soft-robot-actuators",
-    "title": "Soft & Reconfigurable Robotic Actuators",
-    "description": "Pneumatic and hydraulic soft actuators that conform to irregular surfaces and safely interact with delicate or unknown objects — enabling manipulation in environments where rigid robots cannot operate.",
-    "areas": ["new-eyes-bodies", "dexterous-manipulation"],
-    "faculty": ["girish-krishnan", "mattia-gazzola", "craig-shultz", "wenzhen-yuan"],
+    "id": "formal-verification-cps",
+    "title": "Formal Verification for Autonomous Systems",
+    "description": "Automated verification tools that generate correctness certificates for cyber-physical systems — proving that an autonomous controller satisfies safety and liveness properties across all possible environments.",
+    "areas": ["safe-autonomy", "simulation"],
+    "faculty": ["sayan-mitra", "daniel-liberzon"],
     "videos": [],
-    "tags": ["Soft robotics", "Pneumatic", "Manipulation", "Bio-inspired"],
+    "tags": ["Formal methods", "Safety certificates", "CPS", "Verification"],
     "trl": 5
   }
 ]
