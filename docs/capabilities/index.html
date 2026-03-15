@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capabilities — UIUC Center for Autonomy</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <section class="hero" style="padding:2.5rem 0 2rem">
+    <div class="inner">
+      <div class="hero-eyebrow">Research Capabilities</div>
+      <h1 style="font-size:clamp(1.4rem,3vw,2rem)">Capabilities &amp; Prototypes</h1>
+      <p class="hero-lead" style="margin-bottom:0">
+        Demonstrated systems, platforms, and technologies available for collaboration.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner">
+
+      <!-- Filter bar -->
+      <div class="filter-bar" id="filter-bar">
+        <input class="filter-search" id="search-input" type="search"
+               placeholder="Search capabilities…" autocomplete="off" />
+        <span class="filter-count" id="filter-count"></span>
+      </div>
+
+      <!-- Capabilities grid -->
+      <div class="cap-grid" id="cap-grid">
+        <div class="empty-state"><p>Loading…</p></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="contact"></div>
+  <div id="footer"></div>
+
+  <script type="module">
+    import { loadAll } from '../js/data.js';
+    import { renderHeader, renderFooter, renderContact, renderCapCard, initVideoObservers } from '../js/components.js';
+
+    document.getElementById('header').innerHTML  = renderHeader('capabilities');
+    document.getElementById('contact').innerHTML = renderContact('../');
+    document.getElementById('footer').innerHTML  = renderFooter('../');
+
+    const grid    = document.getElementById('cap-grid');
+    const countEl = document.getElementById('filter-count');
+
+    let capabilities = [], areas = [], faculty = [];
+    try {
+      ({ areas, faculty, capabilities } = await loadAll());
+    } catch (err) {
+      grid.innerHTML = `<div class="empty-state"><p>Error loading data: ${err.message}</p></div>`;
+      throw err;
+    }
+
+    // Build area filter buttons
+    const filterBar = document.getElementById('filter-bar');
+
+    const allBtn = document.createElement('button');
+    allBtn.className = 'filter-area-btn active';
+    allBtn.dataset.area = 'all';
+    allBtn.textContent = 'All';
+    filterBar.insertBefore(allBtn, countEl);
+
+    areas.forEach(a => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-area-btn';
+      btn.dataset.area = a.id;
+      btn.textContent = a.title;
+      filterBar.insertBefore(btn, countEl);
+    });
+
+    // Render capability cards
+    grid.innerHTML = capabilities.map(cap => renderCapCard(cap, faculty, areas)).join('');
+    updateCount(capabilities.length);
+    initVideoObservers();
+
+    // ── Filtering ────────────────────────────────────────────────────────────
+
+    let activeArea = 'all';
+    let searchTerm = '';
+
+    function applyFilters() {
+      const cards = grid.querySelectorAll('.cap-card');
+      let visible = 0;
+      cards.forEach(card => {
+        const matchArea   = activeArea === 'all' || card.dataset.areas.split(' ').includes(activeArea);
+        const matchSearch = !searchTerm || card.textContent.toLowerCase().includes(searchTerm);
+        const show = matchArea && matchSearch;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      updateCount(visible);
+    }
+
+    function updateCount(n) {
+      countEl.textContent = `${n} of ${capabilities.length}`;
+    }
+
+    filterBar.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-area-btn');
+      if (!btn) return;
+      activeArea = btn.dataset.area;
+      filterBar.querySelectorAll('.filter-area-btn').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = '';
+        b.style.color = '';
+        b.style.borderColor = '';
+      });
+      btn.classList.add('active');
+      applyFilters();
+    });
+
+    document.getElementById('search-input').addEventListener('input', e => {
+      searchTerm = e.target.value.toLowerCase().trim();
+      applyFilters();
+    });
+
+    // ── Carousel ─────────────────────────────────────────────────────────────
+    document.addEventListener('click', e => {
+      const arrow = e.target.closest('.carousel-arrow');
+      const dot   = e.target.closest('.carousel-dot');
+      const capId = (arrow || dot)?.dataset.cap;
+      if (!capId) return;
+      const carousel = document.getElementById(`carousel-${capId}`);
+      if (!carousel) return;
+      const slides   = carousel.querySelectorAll('.carousel-slide');
+      const dots     = carousel.querySelectorAll('.carousel-dot');
+      const captions = carousel.querySelectorAll('.carousel-caption');
+      let cur  = [...slides].findIndex(s => s.classList.contains('active'));
+      let next = arrow
+        ? (cur + parseInt(arrow.dataset.dir) + slides.length) % slides.length
+        : parseInt(dot.dataset.i);
+      slides[cur].querySelectorAll('video').forEach(v => v.pause());
+      slides[cur].classList.remove('active');
+      dots[cur]?.classList.remove('active');
+      captions[cur]?.classList.remove('active');
+      slides[next].classList.add('active');
+      dots[next]?.classList.add('active');
+      captions[next]?.classList.add('active');
+      slides[next].querySelectorAll('video[data-lazy-play]').forEach(v => v.play().catch(() => {}));
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+[
+  {
+    "id": "l1-adaptive-control",
+    "title": "L1 Adaptive Control for UAVs",
+    "description": "Deployable L1 adaptive controllers providing guaranteed transient and steady-state performance bounds for fixed-wing and multi-rotor UAVs under payload uncertainty and wind disturbances. Demonstrated on Lockheed Martin platforms.",
+    "areas": ["safe-autonomy", "field-mobile"],
+    "faculty": ["naira-hovakimyan"],
+    "videos": [],
+    "tags": ["Adaptive control", "Safety guarantees", "UAV", "Robustness"],
+    "trl": 7
+  },
+  {
+    "id": "mobile-manipulation",
+    "title": "Mobile Manipulation in Everyday Environments",
+    "description": "Integrated perception-planning-control stack for mobile manipulators operating in unstructured indoor environments — reaching, grasping, and rearranging objects without prior scene knowledge.",
+    "areas": ["dexterous-manipulation", "ai-adaptive", "field-mobile"],
+    "faculty": ["kris-hauser", "saurabh-gupta"],
+    "videos": [
+      { "src": "../assets/videos/guptas/mobile-manipulation-clip1.mp4", "loop": true, "caption": "Reaching and grasping" },
+      { "src": "../assets/videos/hauser/mobile-manipulation-clip2.mp4", "loop": true, "caption": "Object rearrangement" },
+      { "src": "../assets/videos/guptas/mobile-manipulation-clip3.mp4", "loop": true, "caption": "Navigation in clutter" },
+      { "src": "../assets/videos/guptas/mobile-manipulation-clip4.mp4", "loop": true, "caption": "Deformable object handling" },
+      { "src": "../assets/videos/guptas/mobile-manipulation-clip5.mp4", "loop": true, "caption": "Task sequencing" }
+    ],
+    "tags": ["Mobile manipulation", "Grasping", "Scene understanding", "Task planning"],
+    "trl": 4
+  },
+  {
+    "id": "physics-world-simulator",
+    "title": "Physics-based World Simulation",
+    "description": "Full-stack ROS 2 / Gazebo simulation environment supporting ground vehicles, drones, and manipulators. Enables closed-loop policy training, sim-to-real transfer, and hardware-in-the-loop testing — all before physical deployment.",
+    "areas": ["simulation", "field-mobile"],
+    "faculty": ["sayan-mitra", "shenlong-wang"],
+    "videos": [
+      { "src": "../assets/videos/mitra/tiled4.mp4", "loop": true, "caption": "Simulator overview" },
+      { "src": "../assets/videos/wangs/l1-adaptive.mp4", "loop": true, "caption": "Ground vehicle simulation" },
+      { "src": "../assets/videos/wangs/simulator-clip1.mp4", "loop": true, "caption": "GEM E2 autonomous vehicle" },
+      { "src": "../assets/videos/wangs/simulator-clip6.mp4", "loop": true, "caption": "Physics simulation" }
+    ],
+    "tags": ["ROS 2", "Gazebo", "Sim-to-real", "Digital twin", "Ground vehicle", "UAV"],
+    "trl": 6
+  },
+  {
+    "id": "certifiable-aerial-autonomy",
+    "title": "Certifiable Agile Aerial Autonomy",
+    "description": "Formally verified control and planning stack for agile aerial robots — enabling high-speed flight and swarm coordination with provable safety guarantees. Developed by the Reliable Autonomy Research Group.",
+    "areas": ["safe-autonomy", "field-mobile", "multi-agent"],
+    "faculty": ["sayan-mitra"],
+    "videos": [
+      { "src": "../assets/videos/mitra/overview.mp4", "loop": true, "caption": "Platform overview" },
+      { "src": "../assets/videos/mitra/certifiable-aerial-autonomy.mp4", "loop": false, "caption": "Agile aerial autonomy with safety certificates" },
+      { "src": "../assets/videos/mitra/swarms-demo.mp4", "loop": false, "caption": "Multi-UAV swarm coordination" }
+    ],
+    "tags": ["Formal verification", "UAV swarms", "Safety certificates", "Agile flight"],
+    "trl": 5
+  },
+  {
+    "id": "hand-object-forecasting",
+    "title": "Hand-Object Interaction Forecasting",
+    "description": "Predictive models for human hand-object interactions, enabling AR coaching and robot assistance in assembly, manipulation, and everyday tasks. Forecasts future states from partial observations.",
+    "areas": ["ai-adaptive", "dexterous-manipulation", "new-eyes-bodies"],
+    "faculty": ["kris-hauser", "saurabh-gupta"],
+    "videos": [
+      { "src": "../assets/videos/hauser/hand-object-forecasting.mp4", "loop": false, "caption": "AR coaching via hand-object interaction forecasting" }
+    ],
+    "tags": ["Computer vision", "AR", "Prediction", "Manipulation"],
+    "trl": 4
+  },
+  {
+    "id": "humanoid-robot-learning",
+    "title": "Humanoid Robot Learning",
+    "description": "Leveraging deep reinforcement learning, we train full-body humanoid controllers that acquire agile locomotion, dexterous manipulation, and whole-body coordination — bridging the sim-to-real gap to deploy learned policies directly on physical platforms.",
+    "areas": ["dexterous-manipulation", "ai-adaptive", "new-eyes-bodies"],
+    "faculty": ["saurabh-gupta", "joohyung-kim"],
+    "videos": [
+      { "src": "../assets/videos/guptas/humanoid-rl.mp4", "loop": true, "caption": "Humanoid locomotion and manipulation via reinforcement learning" }
+    ],
+    "tags": ["Humanoid", "Reinforcement learning", "Sim-to-real", "Locomotion", "Whole-body control"],
+    "trl": 3
+  },
+  {
+    "id": "formal-verification-cps",
+    "title": "Formal Verification for Autonomous Systems",
+    "description": "Automated verification tools that generate correctness certificates for cyber-physical systems — proving that an autonomous controller satisfies safety and liveness properties across all possible environments.",
+    "areas": ["safe-autonomy", "simulation"],
+    "faculty": ["sayan-mitra", "daniel-liberzon"],
+    "videos": [],
+    "tags": ["Formal methods", "Safety certificates", "CPS", "Verification"],
+    "trl": 5
+  },
+  {
+    "id": "digital-twin-construction",
+    "title": "Digital Twin for Facility Monitoring",
+    "description": "Reality-capture and 4D BIM pipeline that fuses LiDAR, RGB-D, and video data into continuously updated 3D digital twins, enabling automated change detection, progress monitoring, and anomaly flagging.",
+    "areas": ["simulation", "new-eyes-bodies"],
+    "faculty": ["mani-golparvar-fard"],
+    "videos": [],
+    "tags": ["Digital twin", "LiDAR", "4D BIM", "Monitoring"],
+    "trl": 7
+  },
+  {
+    "id": "large-scale-motion-capture",
+    "title": "Large-Scale Motion Capture",
+    "description": "Our 8,000 cubic foot motion capture facility delivers centimeter-level accuracy, enabling research in visual autonomy, high-speed navigation, and coordination of heterogeneous ground and aerial swarms.",
+    "areas": ["multi-agent", "field-mobile", "new-eyes-bodies"],
+    "faculty": ["timothy-bretl", "girish-chowdhary", "joohyung-kim", "sayan-mitra"],
+    "videos": [
+      { "src": "../assets/videos/facilities/demo.mp4", "loop": false, "caption": "Large-scale motion capture facility demo" }
+    ],
+    "tags": ["Motion capture", "Visual autonomy", "Swarms", "Heterogeneous robots", "Indoor flight"],
+    "trl": 8
+  },
+  {
+    "id": "soft-robot-actuators",
+    "title": "Soft & Reconfigurable Robotic Actuators",
+    "description": "Pneumatic and hydraulic soft actuators that conform to irregular surfaces and safely interact with delicate or unknown objects — enabling manipulation in environments where rigid robots cannot operate.",
+    "areas": ["new-eyes-bodies", "dexterous-manipulation"],
+    "faculty": ["girish-krishnan", "mattia-gazzola", "craig-shultz", "wenzhen-yuan"],
+    "videos": [],
+    "tags": ["Soft robotics", "Pneumatic", "Manipulation", "Bio-inspired"],
+    "trl": 5
+  }
+]

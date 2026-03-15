@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ai-adaptive",
+    "title": "Physical AI",
+    "icon": "🧠",
+    "color": "#7C3AED",
+    "tagline": "Intelligence that adapts in the field.",
+    "description": "Context-aware autonomy leveraging reinforcement learning, large language models, and adaptive control for robots that handle novel, unscripted scenarios.",
+    "narrative": "Modern autonomous systems must reason, adapt, and act in environments their designers never anticipated. UIUC researchers build the AI stack for this: from sample-efficient reinforcement learning and foundation models grounded in physical dynamics, to hybrid architectures that combine data-driven perception with provably correct controllers."
+  },
+  {
+    "id": "new-eyes-bodies",
+    "title": "New Eyes & Bodies",
+    "icon": "👁️",
+    "color": "#DB2777",
+    "tagline": "Sensing and morphology beyond the conventional.",
+    "description": "Novel sensor modalities, unconventional robot morphologies, and bio-inspired platforms — expanding what robots can detect and where they can go.",
+    "narrative": "Conventional cameras and rigid-body robots leave entire problem spaces unreachable. UIUC researchers pioneer new sensing modalities — acoustic, thermal, RF, event cameras — and pair them with soft, reconfigurable, and bio-inspired platforms. Applications range from NDT on complex geometries to sensing inside pipes, underwater, and through foliage."
+  },
+  {
+    "id": "dexterous-manipulation",
+    "title": "Dexterous Manipulation",
+    "icon": "🦾",
+    "color": "#EA580C",
+    "tagline": "Hands that handle complexity.",
+    "description": "Robotic arms, hands, and novel actuators performing precise, contact-rich tasks in hazardous or confined environments — inspection, assembly, handling, and emergency intervention.",
+    "narrative": "From teleoperated surgical robots to fully autonomous assembly in unstructured spaces, UIUC researchers advance the science of contact-rich manipulation. This spans motion planning under uncertainty, soft and hybrid actuator design, and learning-based grasp synthesis for objects that were never seen before."
+  },
+  {
+    "id": "safe-autonomy",
+    "title": "Certifiable Autonomy",
+    "icon": "🔒",
+    "color": "#059669",
+    "tagline": "Autonomy you can certify.",
+    "description": "Formal verification, runtime assurance, and certified AI for safety-critical autonomous systems — enabling deployment where failure is not an option.",
+    "narrative": "For autonomy to be trusted in high-stakes settings — DoD systems, critical infrastructure, medical devices — it must be verifiably safe, not just empirically tested. UIUC has world-leading expertise in formal methods for cyber-physical systems, L1 adaptive control for guaranteed performance bounds, and compositional verification frameworks that scale to real-world complexity."
+  },
+  {
+    "id": "simulation",
+    "title": "Simulation & Digital Twins",
+    "icon": "🖥️",
+    "color": "#1D4ED8",
+    "tagline": "Test everything before it matters.",
+    "description": "Physics-accurate virtual environments and digital twins for developing, training, and validating autonomous systems — reducing deployment risk and accelerating the development cycle.",
+    "narrative": "The Center operates state-of-the-art ROS 2 / Gazebo simulation infrastructure for ground vehicles, drones, and manipulators. Researchers develop digital twin pipelines that replicate real-world facility conditions, enabling policy training, stress testing, and certification evidence generation entirely in simulation before a single physical trial."
+  },
+  {
+    "id": "field-mobile",
+    "title": "Field & Mobile Robotics",
+    "icon": "🚁",
+    "color": "#0891B2",
+    "tagline": "Robots that go anywhere.",
+    "description": "Autonomous ground, aerial, and marine platforms operating in unstructured, hazardous, and remote environments — from offshore platforms to disaster response to precision agriculture.",
+    "narrative": "UIUC researchers deploy autonomous vehicles across domains where GPS is unreliable, terrain is unstructured, and failures are costly. Our work spans adaptive navigation, resilient control under uncertainty, and closed-loop planning for ground robots, drones, and ROVs. Platforms include the GEM E2 autonomous car, F1/10 race cars, and custom UAV fleets."
+  },
+  {
+    "id": "multi-agent",
+    "title": "Swarms",
+    "icon": "🔗",
+    "color": "#4F46E5",
+    "tagline": "Coordinated intelligence at scale.",
+    "description": "Fleets of robots — drones, ground vehicles, ROVs — coordinating through distributed algorithms, game-theoretic protocols, and shared situational awareness.",
+    "narrative": "Industrial and defense operations increasingly require teams of robots to share information, divide tasks, and adapt collectively to changing conditions. UIUC faculty develop the mathematical foundations and deployed systems for multi-agent coordination: from decentralized swarm controllers to game-theoretic frameworks for adversarial multi-robot environments."
+  }
+]

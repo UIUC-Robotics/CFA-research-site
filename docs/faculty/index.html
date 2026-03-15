@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Directory — UIUC Center for Autonomy</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <!-- Sub-hero -->
+  <section class="hero" style="padding:2.5rem 0 2rem">
+    <div class="inner">
+      <div class="hero-eyebrow">People</div>
+      <h1 style="font-size:clamp(1.4rem,3vw,2rem)">Faculty Directory</h1>
+      <p class="hero-lead" style="margin-bottom:0">
+        Browse and filter faculty across all research areas.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner">
+
+      <!-- Filter bar -->
+      <div class="filter-bar" id="filter-bar">
+        <input class="filter-search" id="search-input" type="search"
+               placeholder="Search by name or research topic…" autocomplete="off" />
+        <!-- area buttons injected by JS -->
+        <span class="filter-count" id="filter-count"></span>
+      </div>
+
+      <!-- Faculty grid -->
+      <div class="faculty-grid" id="faculty-grid">
+        <div class="empty-state"><p>Loading…</p></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script type="module">
+    import { loadAll } from '../js/data.js';
+    import { renderFacultyCard, renderHeader, renderFooter } from '../js/components.js';
+
+    document.getElementById('header').innerHTML = renderHeader('faculty');
+    document.getElementById('footer').innerHTML = renderFooter('../');
+
+    const { areas, faculty } = await loadAll();
+
+    // Build filter buttons
+    const filterBar = document.getElementById('filter-bar');
+    const allBtn = document.createElement('button');
+    allBtn.className = 'filter-area-btn active';
+    allBtn.dataset.area = 'all';
+    allBtn.textContent = 'All';
+    filterBar.insertBefore(allBtn, document.getElementById('filter-count'));
+
+    areas.forEach(a => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-area-btn';
+      btn.dataset.area = a.id;
+      btn.style.setProperty('--area-color', a.color);
+      btn.textContent = a.title;
+      btn.dataset.color = a.color;
+      filterBar.insertBefore(btn, document.getElementById('filter-count'));
+    });
+
+    // Render all faculty initially
+    const grid = document.getElementById('faculty-grid');
+    const allCards = faculty.map(f => renderFacultyCard(f, areas));
+    grid.innerHTML = allCards.join('');
+    updateCount(faculty.length);
+
+    // ── Filtering logic ────────────────────────────────────────────────────
+
+    let activeArea = 'all';
+    let searchTerm = '';
+
+    function applyFilters() {
+      const cards = grid.querySelectorAll('.faculty-card');
+      let visible = 0;
+      cards.forEach(card => {
+        const matchArea = activeArea === 'all' || card.dataset.areas.split(' ').includes(activeArea);
+        const matchSearch = !searchTerm || card.dataset.name.includes(searchTerm) ||
+          card.textContent.toLowerCase().includes(searchTerm);
+        const show = matchArea && matchSearch;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      updateCount(visible);
+    }
+
+    function updateCount(n) {
+      document.getElementById('filter-count').textContent =
+        `${n} of ${faculty.length} faculty`;
+    }
+
+    // Area buttons
+    filterBar.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-area-btn');
+      if (!btn) return;
+      activeArea = btn.dataset.area;
+
+      filterBar.querySelectorAll('.filter-area-btn').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = '';
+        b.style.color = '';
+        b.style.borderColor = '';
+      });
+      btn.classList.add('active');
+      if (activeArea !== 'all' && btn.dataset.color) {
+        btn.style.background = btn.dataset.color;
+        btn.style.color = '#fff';
+        btn.style.borderColor = btn.dataset.color;
+      }
+      applyFilters();
+    });
+
+    // Search
+    document.getElementById('search-input').addEventListener('input', e => {
+      searchTerm = e.target.value.toLowerCase().trim();
+      applyFilters();
+    });
+  </script>
+
+</body>
+</html>

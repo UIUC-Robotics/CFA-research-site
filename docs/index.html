@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Center for Autonomy — UIUC Research & Capabilities</title>
+  <meta name="description" content="Robotics and autonomy research at the University of Illinois Urbana-Champaign — capabilities, faculty, and industry partnerships." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="inner">
+      <div class="hero-eyebrow">University of Illinois Urbana-Champaign</div>
+      <h1>Advancing Frontiers of Robotics and Autonomy</h1>
+      <p class="hero-lead">
+        The Center for Autonomy unites world-class faculty across the Grainger College of Engineering to research and develop impactful autonomous systems ready for real-world.
+      </p>
+    </div>
+  </section>
+
+  <!-- Areas grid -->
+  <section class="section">
+    <div class="inner">
+      <div class="section-header">
+        <h2>Research Areas</h2>
+        <p>Select an area to explore faculty and capabilities.</p>
+      </div>
+      <div class="areas-grid" id="areas-grid">
+        <div class="empty-state"><p>Loading…</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="contact"></div>
+  <div id="footer"></div>
+
+  <script type="module">
+    import { loadAll } from './js/data.js';
+    import { renderAreaCard, renderHeader, renderFooter, renderContact } from './js/components.js';
+
+    document.getElementById('header').innerHTML  = renderHeader('home');
+    document.getElementById('contact').innerHTML = renderContact();
+    document.getElementById('footer').innerHTML  = renderFooter();
+
+    const { areas, faculty, capabilities } = await loadAll();
+
+    document.getElementById('areas-grid').innerHTML =
+      areas.map(a => renderAreaCard(a, faculty, capabilities)).join('');
+  </script>
+
+</body>
+</html>

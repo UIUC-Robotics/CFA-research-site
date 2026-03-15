@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Area — UIUC Center for Autonomy</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div id="header"></div>
+  <div id="area-hero"></div>
+
+  <main>
+    <!-- Narrative -->
+    <section class="section">
+      <div class="inner">
+        <div class="narrative" id="narrative"></div>
+      </div>
+    </section>
+
+    <!-- Faculty -->
+    <section class="section section-alt">
+      <div class="inner">
+        <div class="section-header">
+          <h2>Faculty</h2>
+          <p id="faculty-count"></p>
+        </div>
+        <div class="faculty-grid" id="faculty-grid">
+          <div class="empty-state"><p>Loading…</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="section">
+      <div class="inner">
+        <div class="section-header">
+          <h2>Capabilities &amp; Prototypes</h2>
+          <p id="cap-count"></p>
+        </div>
+        <div class="cap-grid" id="cap-grid">
+          <div class="empty-state"><p>Loading…</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="contact"></div>
+  <div id="footer"></div>
+
+  <script type="module">
+    import { loadAll, getParam } from '../js/data.js';
+    import { renderFacultyCard, renderCapCard, renderHeader, renderFooter, renderContact, initVideoObservers } from '../js/components.js';
+
+    document.getElementById('header').innerHTML  = renderHeader('area');
+    document.getElementById('contact').innerHTML = renderContact('../');
+    document.getElementById('footer').innerHTML  = renderFooter('../');
+
+    const id = getParam('id');
+    const { areas, faculty, capabilities } = await loadAll();
+    const area = areas.find(a => a.id === id);
+
+    if (!area) {
+      document.title = 'Area not found — UIUC CFA';
+      document.getElementById('area-hero').innerHTML =
+        `<div class="inner" style="padding:3rem 0"><p>Area not found. <a href="../index.html">← Back</a></p></div>`;
+    } else {
+
+    document.title = `${area.title} — UIUC Center for Autonomy`;
+
+    // Hero
+    document.getElementById('area-hero').innerHTML = `
+      <div class="area-hero">
+        <div class="inner">
+          <div style="margin-bottom:0.75rem">
+            <a href="../index.html" style="color:rgba(255,255,255,0.6);font-size:0.85rem;text-decoration:none">← All Areas</a>
+          </div>
+          <h1>${area.title}</h1>
+          <div class="area-hero-tagline">${area.tagline}</div>
+          <div class="area-hero-desc">${area.description}</div>
+        </div>
+      </div>`;
+
+    // Narrative
+    document.getElementById('narrative').textContent = area.narrative;
+
+    // Faculty
+    const areaFaculty = faculty.filter(f => f.areas.includes(id));
+    document.getElementById('faculty-count').textContent =
+      `${areaFaculty.length} faculty member${areaFaculty.length !== 1 ? 's' : ''} in this area`;
+    document.getElementById('faculty-grid').innerHTML = areaFaculty.length
+      ? areaFaculty.map(f => renderFacultyCard(f, areas)).join('')
+      : `<div class="empty-state"><p>No faculty assigned yet.</p></div>`;
+
+    // Capabilities
+    const areaCaps = capabilities.filter(c => c.areas.includes(id));
+    document.getElementById('cap-count').textContent =
+      `${areaCaps.length} capability${areaCaps.length !== 1 ? '/prototype' : ''} in this area`;
+    document.getElementById('cap-grid').innerHTML = areaCaps.length
+      ? areaCaps.map(c => renderCapCard(c, faculty, areas)).join('')
+      : `<div class="empty-state"><p>No capabilities listed yet — <a href="https://github.com/UIUC-Robotics/CFA-Research/edit/main/data/capabilities.json" target="_blank">add one ↗</a></p></div>`;
+    initVideoObservers();
+    // ── Carousel logic ─────────────────────────────────────────────────────
+    document.addEventListener('click', e => {
+      const arrow = e.target.closest('.carousel-arrow');
+      const dot   = e.target.closest('.carousel-dot');
+      const capId = (arrow || dot)?.dataset.cap;
+      if (!capId) return;
+
+      const carousel = document.getElementById(`carousel-${capId}`);
+      const slides   = carousel.querySelectorAll('.carousel-slide');
+      const dots     = carousel.querySelectorAll('.carousel-dot');
+      const captions = carousel.querySelectorAll('.carousel-caption');
+      let cur = [...slides].findIndex(s => s.classList.contains('active'));
+
+      let next;
+      if (arrow) next = (cur + parseInt(arrow.dataset.dir) + slides.length) % slides.length;
+      else next = parseInt(dot.dataset.i);
+
+      // Pause any playing video in current slide
+      slides[cur].querySelectorAll('video').forEach(v => v.pause());
+
+      slides[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      if (captions[cur]) captions[cur].classList.remove('active');
+
+      slides[next].classList.add('active');
+      dots[next].classList.add('active');
+      if (captions[next]) captions[next].classList.add('active');
+
+      // Autoplay if the newly shown video is a looping one
+      slides[next].querySelectorAll('video[data-lazy-play]').forEach(v => v.play().catch(() => {}));
+    });
+
+    } // end else
+  </script>
+
+</body>
+</html>

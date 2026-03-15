@@ -1,0 +1,580 @@
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Design Tokens ────────────────────────────────────────────────────────── */
+:root {
+  /* UIUC brand */
+  --uiuc-orange:  #E84A27;
+  --uiuc-blue:    #13294B;
+
+  /* Neutrals */
+  --bg:           #FFFFFF;
+  --bg-subtle:    #F8F9FB;
+  --bg-dark:      #0D1B2A;
+  --border:       #E2E8F0;
+  --border-strong:#CBD5E1;
+  --text:         #1E293B;
+  --text-muted:   #64748B;
+  --text-faint:   #94A3B8;
+
+  /* Spacing & shape */
+  --radius-sm:    4px;
+  --radius:       8px;
+  --radius-lg:    12px;
+  --shadow-sm:    0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow:       0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg:    0 8px 24px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.06);
+
+  /* Layout */
+  --max-width:    1120px;
+  --header-h:     60px;
+}
+
+/* ── Reset ────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: var(--uiuc-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Utilities ────────────────────────────────────────────────────────────── */
+.inner  { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.mono   { font-family: 'JetBrains Mono', monospace; }
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.2rem 0.55rem;
+  border-radius: 99px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+.site-header {
+  height: var(--header-h);
+  background: var(--uiuc-blue);
+  border-bottom: 2px solid rgba(232,74,39,0.6);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.site-header .inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+.header-brand:hover { text-decoration: none; }
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  background: var(--uiuc-orange);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.brand-mark svg { width: 18px; height: 18px; fill: white; }
+.brand-text { line-height: 1.2; }
+.brand-name { font-size: 0.95rem; font-weight: 700; color: #fff; }
+.brand-sub  { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+
+.header-nav {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+  align-items: center;
+}
+.nav-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.nav-link:hover { background: rgba(255,255,255,0.1); color: #fff; text-decoration: none; }
+.nav-link.active { background: rgba(232,74,39,0.2); color: var(--uiuc-orange); }
+.nav-link.external::after { content: ' ↗'; font-size: 0.75em; opacity: 0.6; }
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+.hero {
+  background: var(--bg-dark);
+  color: #fff;
+  padding: 4rem 0 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle dot grid */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+/* Orange accent bar */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--uiuc-orange), transparent 60%);
+}
+.hero .inner { position: relative; }
+.hero-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--uiuc-orange);
+  margin-bottom: 0.75rem;
+}
+.hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 1rem;
+  max-width: 720px;
+}
+.hero-lead {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 620px;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.stat-num {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--uiuc-orange);
+  line-height: 1;
+}
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.3rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Section shell ────────────────────────────────────────────────────────── */
+.section { padding: 3.5rem 0; }
+.section + .section { border-top: 1px solid var(--border); }
+.section-alt { background: var(--bg-subtle); }
+.section-header { margin-bottom: 2rem; }
+.section-header h2 { font-size: 1.5rem; font-weight: 700; color: var(--uiuc-blue); }
+.section-header p  { color: var(--text-muted); margin-top: 0.3rem; font-size: 0.95rem; }
+
+/* ── Area Cards (home grid) ───────────────────────────────────────────────── */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+.area-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s, box-shadow 0.18s;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+.area-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+}
+.area-card-top {
+  height: 4px;
+  background: var(--uiuc-orange);
+}
+.area-card-body { padding: 1.25rem 1.25rem 1rem; flex: 1; }
+.area-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--uiuc-blue);
+  margin-bottom: 0.3rem;
+}
+.area-card-tagline {
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text-faint);
+  margin-bottom: 0.6rem;
+}
+.area-card-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; }
+.area-card-footer {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-subtle);
+}
+.area-card-counts { display: flex; gap: 1rem; }
+.area-count { font-size: 0.8rem; color: var(--text-muted); }
+.area-count strong { color: var(--text); font-weight: 600; }
+.area-card-arrow { font-size: 1rem; color: var(--text-faint); transition: transform 0.15s; }
+.area-card:hover .area-card-arrow { transform: translateX(3px); }
+
+/* ── Faculty Cards ────────────────────────────────────────────────────────── */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.faculty-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+}
+.faculty-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.faculty-photo {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
+  background: var(--bg-subtle);
+}
+.faculty-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: linear-gradient(135deg, var(--bg-subtle), var(--border));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-faint);
+  font-size: 2.5rem;
+}
+.faculty-card-info { padding: 0.85rem 1rem 1rem; }
+.faculty-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--uiuc-blue);
+  margin-bottom: 0.15rem;
+  line-height: 1.3;
+}
+.faculty-title { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.15rem; }
+.faculty-dept  {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--uiuc-orange);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.6rem;
+}
+.faculty-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+
+/* ── Area badges ──────────────────────────────────────────────────────────── */
+.area-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.18rem 0.55rem;
+  border-radius: 99px;
+  white-space: nowrap;
+  background: rgba(19,41,75,0.08);
+  color: var(--uiuc-blue);
+  border: 1px solid rgba(19,41,75,0.15);
+}
+
+/* ── Capability Cards ─────────────────────────────────────────────────────── */
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+.cap-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.15s;
+}
+.cap-card:hover { box-shadow: var(--shadow); }
+.cap-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; }
+.cap-title { font-size: 0.95rem; font-weight: 700; color: var(--uiuc-blue); line-height: 1.3; }
+.trl-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-dark);
+  color: var(--uiuc-orange);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cap-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+.cap-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.cap-faculty { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.25rem; }
+.cap-faculty-link {
+  font-size: 0.78rem;
+  color: var(--uiuc-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.cap-video { margin-top: 0.25rem; }
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+}
+.video-embed iframe,
+.video-embed video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; border: none;
+  object-fit: cover;
+}
+
+/* ── Area detail hero ─────────────────────────────────────────────────────── */
+.area-hero {
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--uiuc-blue);
+  position: relative;
+  overflow: hidden;
+}
+.area-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.area-hero .inner { position: relative; }
+.area-hero h1 {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+.area-hero-tagline {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 1rem;
+}
+.area-hero-desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+/* ── Narrative block ──────────────────────────────────────────────────────── */
+.narrative {
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--uiuc-orange);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.1rem 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ── Filter bar (faculty page) ────────────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.filter-search {
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;
+  padding: 0.55rem 0.875rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--bg);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.filter-search:focus {
+  border-color: var(--uiuc-blue);
+  box-shadow: 0 0 0 3px rgba(19,41,75,0.08);
+}
+.filter-area-btn {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 99px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.filter-area-btn:hover { background: var(--bg-subtle); color: var(--text); }
+.filter-area-btn.active { color: #fff; border-color: transparent; }
+.filter-count {
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  margin-left: auto;
+}
+
+/* ── Contact section ──────────────────────────────────────────────────────── */
+.contact-section {
+  background: var(--uiuc-blue);
+  color: #fff;
+  padding: 3rem 0;
+}
+.contact-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.contact-text h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem; }
+.contact-text p  { color: rgba(255,255,255,0.7); font-size: 0.95rem; max-width: 480px; }
+.contact-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--uiuc-orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: var(--radius);
+  transition: opacity 0.15s;
+}
+.contact-cta:hover { opacity: 0.9; text-decoration: none; }
+
+/* ── Footer ───────────────────────────────────────────────────────────────── */
+.site-footer {
+  background: #080E17;
+  color: rgba(255,255,255,0.45);
+  padding: 1.75rem 0;
+  font-size: 0.82rem;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer-inner a { color: rgba(255,255,255,0.6); }
+.footer-inner a:hover { color: rgba(255,255,255,0.9); }
+.footer-edit { font-size: 0.75rem; opacity: 0.6; }
+
+/* ── Empty state ──────────────────────────────────────────────────────────── */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-faint);
+}
+.empty-state p { font-size: 0.9rem; }
+
+/* ── Video Carousel ───────────────────────────────────────────────────────── */
+.carousel { display: flex; flex-direction: column; gap: 0.5rem; }
+.carousel-track { position: relative; }
+.carousel-slide { display: none; }
+.carousel-slide.active { display: block; }
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.carousel-arrow {
+  background: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  width: 28px; height: 28px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s;
+  padding: 0;
+  line-height: 1;
+}
+.carousel-arrow:hover { background: var(--bg-subtle); color: var(--text); }
+.carousel-dots { display: flex; gap: 0.35rem; align-items: center; }
+.carousel-dot {
+  width: 7px; height: 7px;
+  border-radius: 99px;
+  border: none;
+  background: var(--border-strong);
+  cursor: pointer;
+  transition: background 0.15s, width 0.15s;
+  padding: 0;
+}
+.carousel-dot.active { background: var(--uiuc-orange); width: 16px; }
+.carousel-captions { min-height: 1.2em; text-align: center; }
+.carousel-caption { display: none; font-size: 0.75rem; color: var(--text-faint); }
+.carousel-caption.active { display: block; }
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero { padding: 2.5rem 0 2rem; }
+  .hero-stats { gap: 1.5rem; }
+  .areas-grid { grid-template-columns: 1fr; }
+  .contact-inner { gap: 1.5rem; }
+  .header-nav .nav-link:not(.active) { display: none; }
+}
+@media (max-width: 480px) {
+  .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+  .cap-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "sayan-mitra",
+    "name": "Sayan Mitra",
+    "title": "Professor",
+    "dept": "ECE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=1135&s=300",
+    "url": "http://mitras.ece.illinois.edu/",
+    "research": ["Formal verification", "Cyber-physical systems", "Safe AI", "Mobile robotics"],
+    "areas": ["safe-autonomy", "ai-adaptive", "simulation"]
+  },
+  {
+    "id": "nancy-amato",
+    "name": "Nancy Amato",
+    "title": "Abel Bliss Professor",
+    "dept": "CS",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=17005&s=300",
+    "url": "https://parasollab.web.illinois.edu/",
+    "research": ["Motion planning", "Parallel algorithms", "Robotics", "Computational biology"],
+    "areas": ["field-mobile", "multi-agent", "simulation"]
+  },
+  {
+    "id": "yuliy-baryshnikov",
+    "name": "Yuliy Baryshnikov",
+    "title": "Professor",
+    "dept": "ECE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=3612&s=300",
+    "url": "https://ymb.web.illinois.edu",
+    "research": ["Control systems", "Applied topology", "Motion planning", "Stochastic processes"],
+    "areas": ["safe-autonomy", "multi-agent"]
+  },
+  {
+    "id": "carolyn-beck",
+    "name": "Carolyn Beck",
+    "title": "Associate Professor",
+    "dept": "ISE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=13117&s=300",
+    "url": null,
+    "research": ["Control & optimization", "Network inference", "Dynamic networks", "Data analytics"],
+    "areas": ["multi-agent", "safe-autonomy"]
+  },
+  {
+    "id": "mohamed-belabbas",
+    "name": "Mohamed Ali Belabbas",
+    "title": "Associate Professor",
+    "dept": "ECE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=1729&s=300",
+    "url": "http://publish.illinois.edu/belabbas/",
+    "research": ["Autonomous vehicles", "Nonlinear control", "Machine learning", "Network science"],
+    "areas": ["field-mobile", "ai-adaptive"]
+  },
+  {
+    "id": "timothy-bretl",
+    "name": "Timothy Bretl",
+    "title": "Professor",
+    "dept": "AE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=19905&s=300",
+    "url": "http://bretl.csl.illinois.edu/",
+    "research": ["Robotic manipulation", "Motion planning", "Brain-machine interfaces", "UAVs"],
+    "areas": ["dexterous-manipulation", "field-mobile"]
+  },
+  {
+    "id": "romit-choudhury",
+    "name": "Romit Roy Choudhury",
+    "title": "Professor",
+    "dept": "ECE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=1920&s=300",
+    "url": "https://croy.web.engr.illinois.edu/",
+    "research": ["Wireless sensing", "Computer vision", "Neural imaging", "Signal processing"],
+    "areas": ["new-eyes-bodies", "ai-adaptive"]
+  },
+  {
+    "id": "girish-chowdhary",
+    "name": "Girish Chowdhary",
+    "title": "Associate Professor",
+    "dept": "ABE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=14459&s=300",
+    "url": "http://daslab.illinois.edu",
+    "research": ["Field robotics", "Agricultural autonomy", "Adaptive control", "UAVs"],
+    "areas": ["field-mobile", "new-eyes-bodies", "ai-adaptive"]
+  },
+  {
+    "id": "roy-dong",
+    "name": "Roy Dong",
+    "title": "Assistant Professor",
+    "dept": "ISE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=18292&s=300",
+    "url": "https://roydong.web.illinois.edu/",
+    "research": ["Game theory", "Privacy", "Incentive design", "Cyber-physical systems"],
+    "areas": ["multi-agent", "safe-autonomy"]
+  },
+  {
+    "id": "david-forsyth",
+    "name": "David Forsyth",
+    "title": "Professor",
+    "dept": "CS",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=18259&s=300",
+    "url": null,
+    "research": ["Computer vision", "Machine learning", "Computer graphics"],
+    "areas": ["new-eyes-bodies", "ai-adaptive"]
+  },
+  {
+    "id": "mattia-gazzola",
+    "name": "Mattia Gazzola",
+    "title": "Associate Professor",
+    "dept": "MechSE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=9235&s=300",
+    "url": "https://mattia-lab.com/",
+    "research": ["Soft robotics", "Bio-inspired locomotion", "Physics simulation", "Fluid-structure interaction"],
+    "areas": ["new-eyes-bodies", "dexterous-manipulation", "simulation"]
+  },
+  {
+    "id": "mani-golparvar-fard",
+    "name": "Mani Golparvar-Fard",
+    "title": "Professor",
+    "dept": "CEE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=13159&s=300",
+    "url": "http://raamac.cee.illinois.edu",
+    "research": ["Digital twins", "4D BIM", "Construction monitoring", "3D reconstruction"],
+    "areas": ["simulation", "new-eyes-bodies"]
+  },
+  {
+    "id": "saurabh-gupta",
+    "name": "Saurabh Gupta",
+    "title": "Associate Professor",
+    "dept": "ECE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=16911&s=300",
+    "url": "http://saurabhg.web.illinois.edu",
+    "research": ["Embodied AI", "Robot navigation", "Computer vision", "3D scene understanding"],
+    "areas": ["field-mobile", "new-eyes-bodies", "ai-adaptive"]
+  },
+  {
+    "id": "kris-hauser",
+    "name": "Kris Hauser",
+    "title": "Professor (Founding Assoc. Director)",
+    "dept": "CS",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=19910&s=300",
+    "url": "http://motion.cs.illinois.edu/",
+    "research": ["Motion planning", "Robotic manipulation", "Legged locomotion", "Medical robotics"],
+    "areas": ["dexterous-manipulation", "field-mobile", "simulation"]
+  },
+  {
+    "id": "derek-hoiem",
+    "name": "Derek Hoiem",
+    "title": "Professor",
+    "dept": "CS",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=20632&s=300",
+    "url": "http://dhoiem.cs.illinois.edu/",
+    "research": ["Computer vision", "Scene understanding", "Object recognition"],
+    "areas": ["new-eyes-bodies", "ai-adaptive"]
+  },
+  {
+    "id": "naira-hovakimyan",
+    "name": "Naira Hovakimyan",
+    "title": "Professor",
+    "dept": "MechSE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=16808&s=300",
+    "url": "http://naira-hovakimyan.mechse.illinois.edu/",
+    "research": ["L1 adaptive control", "Safety-critical systems", "Multi-UAV systems", "Human-robot interaction"],
+    "areas": ["safe-autonomy", "field-mobile", "ai-adaptive"]
+  },
+  {
+    "id": "elizabeth-hsiao-wecksler",
+    "name": "Elizabeth Hsiao-Wecksler",
+    "title": "Professor",
+    "dept": "MechSE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=20486&s=300",
+    "url": "http://hdcl.mechanical.illinois.edu",
+    "research": ["Assistive robotics", "Wearable devices", "Biomechanics", "Locomotion"],
+    "areas": ["dexterous-manipulation", "new-eyes-bodies"]
+  },
+  {
+    "id": "nan-jiang",
+    "name": "Nan Jiang",
+    "title": "Associate Professor",
+    "dept": "CS",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=16914&s=300",
+    "url": "http://nanjiang.cs.illinois.edu/",
+    "research": ["Reinforcement learning", "RL theory", "Sample efficiency"],
+    "areas": ["ai-adaptive", "safe-autonomy"]
+  },
+  {
+    "id": "joohyung-kim",
+    "name": "Joohyung Kim",
+    "title": "Associate Professor",
+    "dept": "ECE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=12132&s=300",
+    "url": "https://publish.illinois.edu/kimlab2020/",
+    "research": ["Humanoid robots", "Embodied AI", "Human-robot interaction", "Legged locomotion"],
+    "areas": ["dexterous-manipulation", "ai-adaptive"]
+  },
+  {
+    "id": "william-king",
+    "name": "William King",
+    "title": "Professor",
+    "dept": "MechSE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=16807&s=300",
+    "url": "http://kinglab.mechse.illinois.edu/",
+    "research": ["Advanced manufacturing", "Novel sensors", "Energy systems", "Nanoscale science"],
+    "areas": ["new-eyes-bodies"]
+  },
+  {
+    "id": "girish-krishnan",
+    "name": "Girish Krishnan",
+    "title": "Associate Professor",
+    "dept": "ISE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=1447&s=300",
+    "url": "https://monolithicsystemslab.ise.illinois.edu",
+    "research": ["Soft robotics", "Pneumatic actuators", "Prosthetics", "Agricultural robots"],
+    "areas": ["new-eyes-bodies", "dexterous-manipulation"]
+  },
+  {
+    "id": "cedric-langbort",
+    "name": "Cedric Langbort",
+    "title": "Associate Professor",
+    "dept": "AE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=1164&s=300",
+    "url": null,
+    "research": ["Distributed control", "Multi-agent systems", "Algorithm fairness", "Game theory"],
+    "areas": ["multi-agent", "safe-autonomy"]
+  },
+  {
+    "id": "daniel-liberzon",
+    "name": "Daniel Liberzon",
+    "title": "Professor",
+    "dept": "ECE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=2641&s=300",
+    "url": "http://liberzon.csl.illinois.edu",
+    "research": ["Nonlinear control", "Switched systems", "Control with limited information"],
+    "areas": ["safe-autonomy"]
+  },
+  {
+    "id": "prashant-mehta",
+    "name": "Prashant Mehta",
+    "title": "Associate Professor",
+    "dept": "MechSE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=9211&s=300",
+    "url": "http://mehta.mechse.illinois.edu/",
+    "research": ["Nonlinear estimation", "Particle algorithms", "Mean-field control", "Machine learning"],
+    "areas": ["ai-adaptive", "safe-autonomy"]
+  },
+  {
+    "id": "melkior-ornik",
+    "name": "Melkior Ornik",
+    "title": "Assistant Professor",
+    "dept": "AE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=16452&s=300",
+    "url": "https://mornik.web.illinois.edu/",
+    "research": ["Resilient autonomy", "Control under uncertainty", "UAVs", "Space systems"],
+    "areas": ["field-mobile", "safe-autonomy"]
+  },
+  {
+    "id": "john-reid",
+    "name": "John Reid",
+    "title": "Research Professor",
+    "dept": "CS",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=16266&s=300",
+    "url": null,
+    "research": ["Agricultural robotics", "Precision agriculture", "Autonomous navigation", "Embodied AI"],
+    "areas": ["field-mobile", "ai-adaptive"]
+  },
+  {
+    "id": "katie-driggs-campbell",
+    "name": "Katie Driggs-Campbell",
+    "title": "Associate Professor",
+    "dept": "ECE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=11594&s=300",
+    "url": "https://krdc.web.illinois.edu/",
+    "research": ["Human-robot teaming", "Safe autonomy", "Predictive modeling", "Autonomous vehicles"],
+    "areas": ["safe-autonomy", "ai-adaptive", "field-mobile"]
+  },
+  {
+    "id": "shenlong-wang",
+    "name": "Shenlong Wang",
+    "title": "Assistant Professor",
+    "dept": "CS",
+    "photo": "https://shenlong.web.illinois.edu/images/portrait_2017.JPG",
+    "url": "https://shenlong.web.illinois.edu/",
+    "research": ["3D vision", "Digital twins", "Autonomous vehicles", "Embodied AI", "Neural rendering"],
+    "areas": ["simulation", "field-mobile", "new-eyes-bodies"]
+  },
+  {
+    "id": "craig-shultz",
+    "name": "Craig Shultz",
+    "title": "Assistant Professor",
+    "dept": "ECE",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=shultz88&s=300",
+    "url": "https://www.craigshultz.com/",
+    "research": ["Haptic actuation", "Tactile interfaces", "Human-computer interaction", "Electrostatic actuation", "Soft robotics"],
+    "areas": ["new-eyes-bodies", "dexterous-manipulation"]
+  },
+  {
+    "id": "wenzhen-yuan",
+    "name": "Wenzhen Yuan",
+    "title": "Assistant Professor",
+    "dept": "CS",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=yuanwz&s=300",
+    "url": "https://robotouchlab.com/",
+    "research": ["Tactile sensing", "Robot manipulation", "Soft robotics", "Haptics", "Robot perception"],
+    "areas": ["new-eyes-bodies", "dexterous-manipulation"]
+  }
+]
