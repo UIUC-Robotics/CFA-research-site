@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /tmp/pptx_extract)",
+      "Bash(cp /Users/mitras/Github/CFA/CFA_Research_2026.pptx /tmp/pptx_extract/)",
+      "Read(//tmp/**)",
+      "Bash(unzip -o CFA_Research_2026.pptx -d unpacked)",
+      "Read(//private/tmp/pptx_extract/unpacked/ppt/media/**)",
+      "Read(//Users/mitras/Github/CFA/**)",
+      "Bash(ffmpeg -version)",
+      "Bash(ffmpeg -codecs)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
+      "Bash(open http://localhost:8080)",
+      "Bash(curl -s http://localhost:8080/capabilities/)",
+      "Bash(node --check /tmp/cap_script.mjs)",
+      "Bash(python3 -m json.tool /Users/mitras/Github/CFA/site/data/capabilities.json)",
+      "WebFetch(domain:shenlong.web.illinois.edu)",
+      "WebFetch(domain:ws.engr.illinois.edu)"
+    ]
+  }
+}
