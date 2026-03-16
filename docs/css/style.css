@@ -353,7 +353,7 @@ a:hover { text-decoration: underline; }
   white-space: nowrap;
   flex-shrink: 0;
 }
-.cap-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+.cap-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; }
 .cap-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 .cap-faculty { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.25rem; }
 .cap-faculty-link {
