@@ -39,8 +39,8 @@
   },
   {
     "id": "physics-world-simulator",
-    "title": "Physics-based World Simulation",
-    "description": "Full-stack ROS 2 / Gazebo simulation environment supporting ground vehicles, drones, and manipulators. Enables closed-loop policy training, sim-to-real transfer, and hardware-in-the-loop testing — all before physical deployment.",
+    "title": "Physics-based World Model",
+    "description": "Full-stack simulation environment supporting ground vehicles, drones, and manipulators. Enables closed-loop policy training, sim-to-real transfer, and hardware-in-the-loop testing — all before physical deployment.",
     "areas": ["simulation", "field-mobile"],
     "faculty": ["sayan-mitra", "shenlong-wang"],
     "videos": [
@@ -49,7 +49,7 @@
       { "src": "../assets/videos/wangs/simulator-clip1.mp4", "loop": true, "caption": "GEM E2 autonomous vehicle" },
       { "src": "../assets/videos/wangs/simulator-clip6.mp4", "loop": true, "caption": "Physics simulation" }
     ],
-    "tags": ["ROS 2", "Gazebo", "Sim-to-real", "Digital twin", "Ground vehicle", "UAV"],
+    "tags": ["Sim-to-real", "Digital twin", "Ground vehicle", "UAV"],
     "trl": 6
   },
   {
@@ -114,10 +114,10 @@
   },
   {
     "id": "formal-verification-cps",
-    "title": "Formal Verification for Autonomous Systems",
+    "title": "Formal Reasoning and Verification for Autonomy",
     "description": "Automated verification tools that generate correctness certificates for cyber-physical systems — proving that an autonomous controller satisfies safety and liveness properties across all possible environments.",
     "areas": ["safe-autonomy", "simulation"],
-    "faculty": ["sayan-mitra", "daniel-liberzon"],
+    "faculty": ["sayan-mitra", "daniel-liberzon", "huan-zhang"],
     "videos": [],
     "tags": ["Formal methods", "Safety certificates", "CPS", "Verification"],
     "trl": 5

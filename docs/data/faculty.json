@@ -298,5 +298,15 @@
     "url": "https://robotouchlab.com/",
     "research": ["Tactile sensing", "Robot manipulation", "Soft robotics", "Haptics", "Robot perception"],
     "areas": ["new-eyes-bodies", "dexterous-manipulation"]
+  },
+  {
+    "id": "huan-zhang",
+    "name": "Huan Zhang",
+    "title": "Assistant Professor",
+    "dept": "CS",
+    "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=huanzhang&s=300",
+    "url": "https://huan-zhang.com/",
+    "research": ["Formal verification", "Neural network verification", "Trustworthy AI", "Robustness"],
+    "areas": ["safe-autonomy", "ai-adaptive"]
   }
 ]
