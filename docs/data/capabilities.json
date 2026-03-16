@@ -1,11 +1,13 @@
 [
   {
     "id": "soft-robot-actuators",
-    "title": "Soft & Reconfigurable Robotic Actuators",
+    "title": "Soft Sensors & Actuators",
     "description": "Pneumatic and hydraulic soft actuators that conform to irregular surfaces and safely interact with delicate or unknown objects — enabling manipulation in environments where rigid robots cannot operate.",
     "areas": ["new-eyes-bodies", "dexterous-manipulation"],
     "faculty": ["girish-krishnan", "mattia-gazzola", "craig-shultz", "wenzhen-yuan"],
-    "videos": [],
+    "videos": [
+      { "src": "../assets/videos/shultz/dyanabuttons.mp4", "loop": true, "caption": "Soft actuator demonstration" }
+    ],
     "tags": ["Soft robotics", "Pneumatic", "Manipulation", "Bio-inspired"],
     "trl": 5
   },
