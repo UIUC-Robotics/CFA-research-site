@@ -15,7 +15,9 @@
     "description": "Deployable L1 adaptive controllers providing guaranteed transient and steady-state performance bounds for fixed-wing and multi-rotor UAVs under payload uncertainty and wind disturbances. Demonstrated on Lockheed Martin platforms.",
     "areas": ["safe-autonomy", "field-mobile"],
     "faculty": ["naira-hovakimyan"],
-    "videos": [],
+    "videos": [
+      { "src": "../assets/videos/hovakimyan/L1ac.mp4", "loop": true, "caption": "L1 adaptive control on UAV" }
+    ],
     "tags": ["Adaptive control", "Safety guarantees", "UAV", "Robustness"],
     "trl": 7
   },
