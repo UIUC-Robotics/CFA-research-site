@@ -25,10 +25,10 @@
   },
   {
     "id": "mobile-manipulation",
-    "title": "Mobile Manipulation in Everyday Environments",
+    "title": "Mobile Manipulation",
     "description": "Integrated perception-planning-control stack for mobile manipulators operating in unstructured indoor environments — reaching, grasping, and rearranging objects without prior scene knowledge.",
     "areas": ["dexterous-manipulation", "ai-adaptive", "field-mobile"],
-    "faculty": ["kris-hauser", "saurabh-gupta"],
+    "faculty": ["kris-hauser", "saurabh-gupta", "katie-driggs-campbell"],
     "videos": [
       { "src": "../assets/videos/guptas/mobile-manipulation-clip1.mp4", "loop": true, "caption": "Reaching and grasping" },
       { "src": "../assets/videos/hauser/mobile-manipulation-clip2.mp4", "loop": true, "caption": "Object rearrangement" },
@@ -36,14 +36,14 @@
       { "src": "../assets/videos/guptas/mobile-manipulation-clip4.mp4", "loop": true, "caption": "Deformable object handling" },
       { "src": "../assets/videos/guptas/mobile-manipulation-clip5.mp4", "loop": true, "caption": "Task sequencing" }
     ],
-    "tags": ["Mobile manipulation", "Grasping", "Scene understanding", "Task planning"],
+    "tags": ["Scene understanding", "Task planning"],
     "trl": 4
   },
   {
     "id": "physics-world-simulator",
     "title": "Physics-based World Model",
     "description": "Full-stack simulation environment supporting ground vehicles, drones, and manipulators. Enables closed-loop policy training, sim-to-real transfer, and hardware-in-the-loop testing — all before physical deployment.",
-    "areas": ["simulation", "field-mobile"],
+    "areas": ["simulation", "field-mobile", "ai-adaptive"],
     "faculty": ["sayan-mitra", "shenlong-wang"],
     "videos": [
       { "src": "../assets/videos/mitra/tiled4.mp4", "loop": true, "caption": "Simulator overview" },
@@ -51,14 +51,14 @@
       { "src": "../assets/videos/wangs/simulator-clip1.mp4", "loop": true, "caption": "GEM E2 autonomous vehicle" },
       { "src": "../assets/videos/wangs/simulator-clip6.mp4", "loop": true, "caption": "Physics simulation" }
     ],
-    "tags": ["Sim-to-real", "Digital twin", "Ground vehicle", "UAV"],
+    "tags": ["Sim-to-real", "Digital twin"],
     "trl": 6
   },
   {
     "id": "certifiable-aerial-autonomy",
-    "title": "Certifiable Agile Aerial Autonomy",
+    "title": "Certifiable Agile Autonomy",
     "description": "Formally verified control and planning stack for agile aerial robots — enabling high-speed flight and swarm coordination with provable safety guarantees. Developed by the Reliable Autonomy Research Group.",
-    "areas": ["safe-autonomy", "field-mobile", "multi-agent"],
+    "areas": ["safe-autonomy", "field-mobile", "multi-agent", "ai-adaptive"],
     "faculty": ["sayan-mitra"],
     "videos": [
       { "src": "../assets/videos/mitra/overview.mp4", "loop": true, "caption": "Platform overview" },
@@ -77,7 +77,7 @@
     "videos": [
       { "src": "../assets/videos/hauser/hand-object-forecasting.mp4", "loop": false, "caption": "AR coaching via hand-object interaction forecasting" }
     ],
-    "tags": ["Computer vision", "AR", "Prediction", "Manipulation"],
+    "tags": ["Computer vision", "AR"],
     "trl": 4
   },
   {
@@ -113,6 +113,30 @@
     ],
     "tags": ["Motion capture", "Visual autonomy", "Swarms", "Heterogeneous robots", "Indoor flight"],
     "trl": 8
+  },
+  {
+    "id": "social-navigation",
+    "title": "Social Navigation",
+    "description": "Safe, interaction-aware robot navigation using graph representations to capture influence between agents. Combines motion prediction for foresight and occlusion handling with reinforcement learning to balance safety, efficiency, and social interaction — with successful sim-to-real transfer.",
+    "areas": ["field-mobile", "ai-adaptive"],
+    "faculty": ["katie-driggs-campbell"],
+    "videos": [
+      { "src": "../assets/videos/driggs-campbell/social-nav.mp4", "loop": true, "caption": "Interaction-aware social navigation" }
+    ],
+    "tags": ["Social navigation", "Human-robot interaction", "Reinforcement learning", "Safety"],
+    "trl": 4
+  },
+  {
+    "id": "traversability-prediction",
+    "title": "Traversability Prediction",
+    "description": "Autonomous capabilities for agricultural robots, focusing on failure recovery through anomaly detection and developing new frameworks for supervisory control and fleet management of field robot teams.",
+    "areas": ["field-mobile"],
+    "faculty": ["katie-driggs-campbell", "girish-chowdhary"],
+    "videos": [
+      { "src": "../assets/videos/driggs-campbell/traversability.mp4", "loop": true, "caption": "Traversability prediction for field robots" }
+    ],
+    "tags": ["Agricultural robotics", "Anomaly detection", "Fleet management", "Failure recovery"],
+    "trl": 4
   },
   {
     "id": "formal-verification-cps",
