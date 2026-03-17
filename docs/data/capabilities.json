@@ -93,14 +93,16 @@
     "trl": 3
   },
   {
-    "id": "digital-twin-construction",
-    "title": "Digital Twin for Facility Monitoring",
-    "description": "Reality-capture and 4D BIM pipeline that fuses LiDAR, RGB-D, and video data into continuously updated 3D digital twins, enabling automated change detection, progress monitoring, and anomaly flagging.",
-    "areas": ["simulation", "new-eyes-bodies"],
-    "faculty": ["mani-golparvar-fard"],
-    "videos": [],
-    "tags": ["Digital twin", "LiDAR", "4D BIM", "Monitoring"],
-    "trl": 7
+    "id": "traversability-prediction",
+    "title": "Traversability Prediction",
+    "description": "Autonomous capabilities for agricultural robots, focusing on failure recovery through anomaly detection and developing new frameworks for supervisory control and fleet management of field robot teams.",
+    "areas": ["field-mobile", "dexterous-manipulation"],
+    "faculty": ["katie-driggs-campbell", "girish-chowdhary"],
+    "videos": [
+      { "src": "../assets/videos/driggs-campbell/traversability.mp4", "loop": true, "caption": "Traversability prediction for field robots" }
+    ],
+    "tags": ["Agricultural robotics", "Anomaly detection", "Fleet management", "Failure recovery"],
+    "trl": 4
   },
   {
     "id": "large-scale-motion-capture",
@@ -118,7 +120,7 @@
     "id": "social-navigation",
     "title": "Social Navigation",
     "description": "Safe, interaction-aware robot navigation using graph representations to capture influence between agents. Combines motion prediction for foresight and occlusion handling with reinforcement learning to balance safety, efficiency, and social interaction — with successful sim-to-real transfer.",
-    "areas": ["field-mobile", "ai-adaptive"],
+    "areas": ["field-mobile", "ai-adaptive", "dexterous-manipulation"],
     "faculty": ["katie-driggs-campbell"],
     "videos": [
       { "src": "../assets/videos/driggs-campbell/social-nav.mp4", "loop": true, "caption": "Interaction-aware social navigation" }
@@ -127,16 +129,14 @@
     "trl": 4
   },
   {
-    "id": "traversability-prediction",
-    "title": "Traversability Prediction",
-    "description": "Autonomous capabilities for agricultural robots, focusing on failure recovery through anomaly detection and developing new frameworks for supervisory control and fleet management of field robot teams.",
-    "areas": ["field-mobile"],
-    "faculty": ["katie-driggs-campbell", "girish-chowdhary"],
-    "videos": [
-      { "src": "../assets/videos/driggs-campbell/traversability.mp4", "loop": true, "caption": "Traversability prediction for field robots" }
-    ],
-    "tags": ["Agricultural robotics", "Anomaly detection", "Fleet management", "Failure recovery"],
-    "trl": 4
+    "id": "digital-twin-construction",
+    "title": "Digital Twin for Facility Monitoring",
+    "description": "Reality-capture and 4D BIM pipeline that fuses LiDAR, RGB-D, and video data into continuously updated 3D digital twins, enabling automated change detection, progress monitoring, and anomaly flagging.",
+    "areas": ["simulation", "new-eyes-bodies"],
+    "faculty": ["mani-golparvar-fard"],
+    "videos": [],
+    "tags": ["Digital twin", "LiDAR", "4D BIM", "Monitoring"],
+    "trl": 7
   },
   {
     "id": "formal-verification-cps",

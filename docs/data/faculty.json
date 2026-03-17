@@ -17,7 +17,7 @@
     "photo": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=11594&s=300",
     "url": "https://krdc.web.illinois.edu/",
     "research": ["Human-robot teaming", "Safe autonomy", "Predictive modeling", "Autonomous vehicles"],
-    "areas": ["safe-autonomy", "ai-adaptive", "field-mobile"]
+    "areas": ["safe-autonomy", "ai-adaptive", "field-mobile", "dexterous-manipulation"]
   },
   {
     "id": "nancy-amato",
